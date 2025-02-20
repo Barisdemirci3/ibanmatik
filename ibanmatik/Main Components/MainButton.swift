@@ -28,7 +28,6 @@ struct MainButton: View {
             Text(buttonText)
                 .font(.system(size: 17, weight: .bold, design: .default))
                 .foregroundStyle(Color.white)
-            
         }
     }
 
