@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabViewItem: View {
+    @State private var currentDetent : PresentationDetent = .medium
     @State var isTouch = false
     var body: some View {
         ZStack{
@@ -29,7 +30,7 @@ struct TabViewItem: View {
                 HStack{
                     Spacer()
                     AddButton(buttonAction: {
-                        isTouch.toggle()
+                        showSheetWithDelay()
                     })
                         .padding(30)
                         .padding(.vertical,50)
@@ -39,8 +40,17 @@ struct TabViewItem: View {
         }
         .sheet(isPresented: $isTouch) {
             AddIban()
+                .presentationDetents([.medium, .large], selection: $currentDetent)
+                .presentationDragIndicator(.visible)
+                .animation(.easeInOut, value: isTouch)
         }
     }
+    func showSheetWithDelay() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            isTouch = true
+        }
+    }
+
 }
 
 #Preview {

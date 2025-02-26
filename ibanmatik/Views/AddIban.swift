@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct AddIban: View {
+    @State var username = ""
     var body: some View {
-        Text("Iban Ekle")
-            .bold()
-            .font(.title)
-        Rectangle()
-            .frame(height: 1)
-            .opacity(0.4)
-        MainButton(buttonText: "Iban Ekle"){
-            
+        VStack{
+            Spacer()
+            TextField("IBAN", text: $username)
+                            .keyboardType(.default) // Klavye türünü belirleme
+                            .autocapitalization(.none) // Otomatik büyük harfi kapatma
+                            .disableAutocorrection(true) // Otomatik düzeltmeyi kapatma
+                            .padding()
+                            .background(Color(.systemGray6))
+                            .cornerRadius(10)
+                            .shadow(radius: 3)
+            MainButton(buttonText: "IBAN Ekle"){
+                print("Eklendi")
+            }
+            Spacer()
         }
-        Spacer()
-        
+        .padding()
     }
 }
 
