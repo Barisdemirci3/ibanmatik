@@ -21,7 +21,6 @@ struct OnboardingFirst: View {
                 CircleForOnboarding(stateForCircles: 1)
                 MainButton(buttonText: "Devam Et", destination: AnyView(OnboardingSecond()))
             }
-            .background(Color.white)
             .padding()
         }
         .navigationBarBackButtonHidden(true)

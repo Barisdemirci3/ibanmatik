@@ -22,7 +22,6 @@ struct OnboardingSecond: View {
                 MainButton(buttonText: "Devam Et", destination: AnyView(OnboardingThree()))
                     .navigationBarBackButtonHidden(true)
             }
-            .background(Color.white)
             .padding()
         }
         .navigationBarBackButtonHidden(true)
