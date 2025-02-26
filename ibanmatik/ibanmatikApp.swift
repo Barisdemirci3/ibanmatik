@@ -18,7 +18,7 @@ struct ibanmatikApp: App {
                 OnboardingFirst()
             }
             else{
-                ContentView()
+                TabViewItem()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
