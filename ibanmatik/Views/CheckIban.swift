@@ -11,6 +11,7 @@ struct CheckIban: View {
     @State var username = ""
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
+        VStack{
             Text("IBAN Sorgula")
                 .bold()
                 .font(.title)
@@ -27,20 +28,21 @@ struct CheckIban: View {
                 .cornerRadius(10)
                 .shadow(radius: 3)
                 .padding()
-        Rectangle()
-            .frame(height: 1)
-            .opacity(0.19)
-        VStack{
-            Image("Test")
-                .resizable()
-                .frame(width: 210, height: 180)
-                .aspectRatio(contentMode: .fill)
-            Text("Sonuç burada!")
-                .font(.title)
-                .bold()
+            Rectangle()
+                .frame(height: 1)
+                .opacity(0.19)
+            VStack{
+                Image("Test")
+                    .resizable()
+                    .frame(width: 210, height: 180)
+                    .aspectRatio(contentMode: .fill)
+                Text("Sonuç burada!")
+                    .font(.title)
+                    .bold()
+            }
+            .padding()
+            Spacer()
         }
-        .padding()
-        Spacer()
     }
 }
 

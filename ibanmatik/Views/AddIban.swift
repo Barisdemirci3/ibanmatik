@@ -13,6 +13,9 @@ struct AddIban: View {
     var body: some View {
         VStack{
             Spacer()
+            Text("IBAN Ekle")
+                .font(.title)
+                .bold()
             TextField("IBAN", text: $username)
                             .keyboardType(.default) // Klavye türünü belirleme
                             .autocapitalization(.none) // Otomatik büyük harfi kapatma
