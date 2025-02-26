@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddIban: View {
+    @Environment(\.colorScheme) var colorScheme
     @State var username = ""
     var body: some View {
         VStack{
@@ -17,7 +18,7 @@ struct AddIban: View {
                             .autocapitalization(.none) // Otomatik büyük harfi kapatma
                             .disableAutocorrection(true) // Otomatik düzeltmeyi kapatma
                             .padding()
-                            .background(Color(.systemGray6))
+                            .background(colorScheme == .dark ? Color(.systemGray4) : Color(.systemGray6))
                             .cornerRadius(10)
                             .shadow(radius: 3)
             MainButton(buttonText: "IBAN Ekle"){
