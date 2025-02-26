@@ -18,10 +18,10 @@ struct AddButton: View {
 private var ButtonView: some View {
     ZStack{
         Circle()
-            .frame(width: 40)
+            .frame(width: 50)
             .foregroundStyle(Color(hue: 1.0, saturation: 0.749, brightness: 0.896))
         Image(systemName: "plus")
-            .font(.system(size: 20))
+            .font(.system(size: 29))
             .foregroundStyle(Color.white)
     }
 }

@@ -9,12 +9,18 @@ import SwiftUI
 
 @main
 struct ibanmatikApp: App {
+    @AppStorage("onBoardingPass") var onBoardingPass = false
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if onBoardingPass == false {
+                OnboardingFirst()
+            }
+            else{
+                ContentView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }

@@ -21,6 +21,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		21127F9C2D68DC8900F6A4EB /* Items */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Items;
+			sourceTree = "<group>";
+		};
 		211B9BC22D67AF79007ABB51 /* ibanmatik */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -45,6 +50,7 @@
 		211B9BB72D67AF79007ABB51 = {
 			isa = PBXGroup;
 			children = (
+				21127F9C2D68DC8900F6A4EB /* Items */,
 				211B9BC22D67AF79007ABB51 /* ibanmatik */,
 				211B9BC12D67AF79007ABB51 /* Products */,
 			);
@@ -74,6 +80,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				21127F9C2D68DC8900F6A4EB /* Items */,
 				211B9BC22D67AF79007ABB51 /* ibanmatik */,
 			);
 			name = ibanmatik;
