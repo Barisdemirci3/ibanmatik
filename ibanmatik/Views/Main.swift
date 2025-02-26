@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct Main: View {
+    @State var isTouch: Bool = false
+    @State private var currentDetent: PresentationDetent = .medium
     var body: some View {
+        ZStack{
         VStack(spacing: 16) { // Header ile içerik arasına boşluk bırak
             // ✅ Header
             Text("Anasayfa")
@@ -25,6 +28,29 @@ struct Main: View {
                     }
                 }
             }
+        }
+            VStack{
+                Spacer()
+                HStack{
+                    Spacer()
+                    AddButton(buttonAction: {
+                        showSheetWithDelay()
+                    })
+                    .padding(20)
+                    .padding(.vertical,30)
+                }
+            }
+        }
+        .sheet(isPresented: $isTouch) {
+            AddIban()
+                .presentationDetents([.medium, .large], selection: $currentDetent)
+                .presentationDragIndicator(.visible)
+                .animation(.easeInOut, value: isTouch)
+        }
+    }
+    func showSheetWithDelay() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            isTouch = true
         }
     }
 }

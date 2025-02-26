@@ -2,13 +2,13 @@ import SwiftUI
 
 struct IbanItem: View {
     @State var iban: String
-    var bankLogo: String = "Image" // Asset'teki banka logosu
-    var nickname: String? = "Kredi Kartım" // Takma isim (Opsiyonel)
+    var bankLogo: String = "Image"
+    var nickname: String? = "Kredi Kartım"
 
     var body: some View {
-        ZStack(alignment: .topTrailing) { // Badge sağ üst köşeye eklendi
+        ZStack(alignment: .topTrailing) {
             HStack {
-                // ✅ Banka Logosu
+                
                 Image(bankLogo)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -16,12 +16,12 @@ struct IbanItem: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .shadow(radius: 3)
 
-                // ✅ Dikey Ayırıcı Çizgi
+                
                 Rectangle()
                     .frame(width: 1, height: 55)
                     .foregroundStyle(Color.gray)
 
-                // ✅ IBAN Bilgisi
+                
                 VStack(alignment: .leading, spacing: 5) {
                     Text("IBAN Numaranız")
                         .font(.headline)
@@ -32,14 +32,14 @@ struct IbanItem: View {
                         .foregroundStyle(.primary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
-                        .textSelection(.enabled) // Kopyalamaya izin ver
+                        .textSelection(.enabled)
                 }
 
                 Spacer()
 
-                // ✅ Kopyalama Butonu
+                
                 Button(action: {
-                    UIPasteboard.general.string = iban // IBAN'ı kopyala
+                    UIPasteboard.general.string = iban
                 }) {
                     Image(systemName: "doc.on.doc.fill")
                         .font(.title2)
@@ -54,7 +54,7 @@ struct IbanItem: View {
             .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray.opacity(0.3), lineWidth: 1))
             .padding(.horizontal)
 
-            // ✅ Takma isim varsa sağ üst köşeye badge ekle
+            
             if let nickname = nickname {
                 GeometryReader { geometry in
                     Text(nickname)
@@ -66,7 +66,7 @@ struct IbanItem: View {
                         .cornerRadius(10)
                         .position(x: geometry.size.width - 305, y: -5) 
                 }
-                .frame(height: 0) // GeometryReader'ın boyutunu 0 yapıyoruz ki sadece position ile yerleşim sağlasın
+                .frame(height: 0)
             }
         }
     }
