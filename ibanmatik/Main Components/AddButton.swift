@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct AddButton: View {
+    var buttonAction : (() -> Void)? = nil
     var body: some View {
-        Button(action: { }) {
-            ButtonView
+        if let buttonAction = buttonAction{
+            Button(action: buttonAction) {
+                ButtonView
+            }
         }
     }
 }

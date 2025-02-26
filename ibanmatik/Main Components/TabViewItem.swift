@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabViewItem: View {
+    @State var isTouch = false
     var body: some View {
         ZStack{
             TabView{
@@ -27,12 +28,17 @@ struct TabViewItem: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    AddButton()
+                    AddButton(buttonAction: {
+                        isTouch.toggle()
+                    })
                         .padding(30)
                         .padding(.vertical,50)
                 }
             }
          
+        }
+        .sheet(isPresented: $isTouch) {
+            OnboardingThree()
         }
     }
 }
