@@ -3,7 +3,7 @@ import SwiftUI
 struct IbanItem: View {
     @State var iban: String
     var bankLogo: String = "Image"
-    var nickname: String? = "Kredi Kartım"
+    var nickname: String
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -53,9 +53,6 @@ struct IbanItem: View {
             .background(RoundedRectangle(cornerRadius: 12).fill(Color(.systemGray6)))
             .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray.opacity(0.3), lineWidth: 1))
             .padding(.horizontal)
-
-            
-            if let nickname = nickname {
                 GeometryReader { geometry in
                     Text(nickname)
                         .font(.system(size: 16, weight: .bold))
@@ -67,11 +64,10 @@ struct IbanItem: View {
                         .position(x: geometry.size.width - 305, y: -5) 
                 }
                 .frame(height: 0)
-            }
         }
     }
 }
 
 #Preview {
-    IbanItem(iban: "TR12 3123 2132 1321 3123 12")
+    IbanItem(iban: "TR12 3123 2132 1321 3123 12", nickname: "Kredi kartı")
 }

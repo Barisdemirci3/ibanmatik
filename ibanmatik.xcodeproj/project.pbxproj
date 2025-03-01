@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21C7731D2D73B2A100071814 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21C7731C2D73B2A100071814 /* Realm */; };
-		21C7731F2D73B2A100071814 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21C7731E2D73B2A100071814 /* RealmSwift */; };
+		21C773332D73BAF200071814 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21C773322D73BAF200071814 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,7 +15,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		211B9BD32D67AF7B007ABB51 /* Exceptions for "ibanmatik" folder in "ibanmatik" target */ = {
+		21C773342D73BB7C00071814 /* Exceptions for "ibanmatik" folder in "ibanmatik" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -29,14 +28,9 @@
 		211B9BC22D67AF79007ABB51 /* ibanmatik */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				211B9BD32D67AF7B007ABB51 /* Exceptions for "ibanmatik" folder in "ibanmatik" target */,
+				21C773342D73BB7C00071814 /* Exceptions for "ibanmatik" folder in "ibanmatik" target */,
 			);
 			path = ibanmatik;
-			sourceTree = "<group>";
-		};
-		21C773222D73B34C00071814 /* ModelView */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -46,8 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C7731F2D73B2A100071814 /* RealmSwift in Frameworks */,
-				21C7731D2D73B2A100071814 /* Realm in Frameworks */,
+				21C773332D73BAF200071814 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +50,8 @@
 		211B9BB72D67AF79007ABB51 = {
 			isa = PBXGroup;
 			children = (
-				21C773222D73B34C00071814 /* ModelView */,
 				211B9BC22D67AF79007ABB51 /* ibanmatik */,
+				21C7732B2D73B98600071814 /* Frameworks */,
 				211B9BC12D67AF79007ABB51 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +62,13 @@
 				211B9BC02D67AF79007ABB51 /* ibanmatik.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		21C7732B2D73B98600071814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,12 +88,10 @@
 			);
 			fileSystemSynchronizedGroups = (
 				211B9BC22D67AF79007ABB51 /* ibanmatik */,
-				21C773222D73B34C00071814 /* ModelView */,
 			);
 			name = ibanmatik;
 			packageProductDependencies = (
-				21C7731C2D73B2A100071814 /* Realm */,
-				21C7731E2D73B2A100071814 /* RealmSwift */,
+				21C773322D73BAF200071814 /* RealmSwift */,
 			);
 			productName = ibanmatik;
 			productReference = 211B9BC02D67AF79007ABB51 /* ibanmatik.app */;
@@ -124,7 +122,7 @@
 			mainGroup = 211B9BB72D67AF79007ABB51;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				21C7731B2D73B2A100071814 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				21C773312D73BAF200071814 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 211B9BC12D67AF79007ABB51 /* Products */;
@@ -169,9 +167,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ibanmatik/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "İbanmatik";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -199,9 +200,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ibanmatik/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "İbanmatik";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,25 +364,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		21C7731B2D73B2A100071814 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		21C773312D73BAF200071814 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		21C7731C2D73B2A100071814 /* Realm */ = {
+		21C773322D73BAF200071814 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 21C7731B2D73B2A100071814 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		21C7731E2D73B2A100071814 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21C7731B2D73B2A100071814 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 21C773312D73BAF200071814 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

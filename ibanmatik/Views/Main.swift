@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Main: View {
+    @StateObject var viewmodel = IbanMV()
     @State var isTouch: Bool = false
     @State private var currentDetent: PresentationDetent = .medium
     var body: some View {
@@ -22,9 +23,8 @@ struct Main: View {
                 .foregroundColor(.secondary.opacity(0.5))
             ScrollView{
                 LazyVStack{
-                    ForEach(0..<100, id: \.self){ _ in
-                        IbanItem(iban: "1231232132132123321")
-                            .padding(.vertical, 19)
+                    ForEach(viewmodel.ibans){ ibanitem in
+                        IbanItem(iban: ibanitem.ibanNumber, nickname: ibanitem.ibanName)
                     }
                 }
             }
